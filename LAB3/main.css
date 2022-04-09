@@ -1,25 +1,30 @@
 .header-title {
+  position: relative;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  animation-name: slide-header;
+  animation-timing-function: linear;
+  animation-duration: 2s;
 }
 
-.header-button {
+.nav-button {
   border: none;
   background-color: transparent;
   font-size: 16px;
   font-weight: bold;
 }
 
-.header-button:hover {
+.nav-button:hover {
   cursor: pointer;
   background-color: lightgray;
 }
 
-.header-button__selected {
+.nav-button__selected {
   background-color: lightgray;
 }
 
 main {
-  width: 350px;
+  width: 500px;
   margin: 20px 0;
   padding: 20px 0;
   border: 1px solid black;
@@ -30,12 +35,12 @@ main {
 .input-wrapper {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  padding: 20px 0 20px 80px;
 }
 
 .input-wrapper > div {
   display: flex;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 .input-wrapper label {
@@ -47,7 +52,6 @@ main {
 .button-wrapper {
   display: flex;
   justify-content: space-around;
-  width: 100%;
   padding-top: 20px;
 }
 
@@ -62,4 +66,47 @@ main {
 
 .button__cancel {
   background-color: lightcoral;
+}
+
+nav {
+  width: 500px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  max-width: 1020px;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@keyframes slide-header {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.item {
+  border: 1px solid black;
+  height: 400px;
+  overflow: hidden;
+}
+
+.item-image {
+  width: 200px;
+  transition: all 2s ease-in-out;
+}
+
+.item-rotate:hover {
+  transform: rotate(360deg);
+}
+.item-resize:hover {
+  width: 100%;
 }
