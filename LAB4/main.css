@@ -1,6 +1,62 @@
+body {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+  min-width: 480px;
+
+  width: 100vw;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+
+  flex-wrap: nowrap;
+  padding-top: 20px;
+}
+
+@media screen {
+  .item {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .item {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  header {
+    font-size: 13px;
+  }
+  nav {
+    flex-direction: column;
+  }
+  .item {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+nav input {
+  width: 100px;
+  height: 30px;
+}
+
 .header-title {
   position: relative;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  white-space: nowrap;
 
   animation-name: slide-header;
   animation-timing-function: linear;
@@ -12,6 +68,8 @@
   background-color: transparent;
   font-size: 16px;
   font-weight: bold;
+  padding: 5px 10px;
+  width: 100%;
 }
 
 .nav-button:hover {
@@ -23,18 +81,10 @@
   background-color: lightgray;
 }
 
-main {
-  width: 500px;
-  margin: 20px 0;
-  padding: 20px 0;
-  border: 1px solid black;
-  border-left: none;
-  border-right: none;
-}
-
 .input-wrapper {
   display: flex;
   flex-direction: column;
+
   padding: 20px 0 20px 80px;
 }
 
@@ -45,19 +95,9 @@ main {
 
 .input-wrapper label {
   display: block;
+
   width: 100px;
   text-align: center;
-}
-
-.button-wrapper {
-  display: flex;
-  justify-content: space-around;
-  padding-top: 20px;
-}
-
-.button-wrapper input {
-  width: 100px;
-  height: 30px;
 }
 
 .button__submit {
@@ -68,20 +108,8 @@ main {
   background-color: lightcoral;
 }
 
-nav {
-  width: 500px;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  max-width: 1020px;
-}
-
 header {
   position: relative;
-  width: 100%;
-  overflow-x: hidden;
 }
 
 @keyframes slide-header {
@@ -93,14 +121,27 @@ header {
   }
 }
 
+.item-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
   border: 1px solid black;
-  height: 400px;
+  margin: 10px;
   overflow: hidden;
 }
 
 .item-image {
-  width: 200px;
+  width: 100px;
   transition: all 2s ease-in-out;
 }
 
@@ -109,4 +150,19 @@ header {
 }
 .item-resize:hover {
   width: 100%;
+}
+
+hr {
+  display: block;
+
+  width: 100%;
+  height: 0.5px;
+  margin: 15px 0;
+  background-color: black;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
 }
