@@ -25,7 +25,7 @@
         </div>
         <hr />
         <div class="item-wrapper"></div>
-        <div class="observe-target">fwef</div>
+        <div class="observe-target"></div>
         <hr />
     </main>
 </body>
@@ -46,7 +46,7 @@
         if(isLoading){
             return;
         }
-        
+
         isLoading = true;
         const res = await fetch('product.json');
         const json = await res.json();
@@ -86,6 +86,7 @@
         ),'<option value="all">all</option>');
 
         categorySelect.innerHTML = categoryHtml;
+        categorySelect.value = category;
     }
 
     const makeItem = (data)=>{
