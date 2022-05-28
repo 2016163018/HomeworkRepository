@@ -51,4 +51,17 @@
         </div>
     </main>
 </body>
+<script>
+    console.log("hello");
+    const getProduct = async ()=>{
+        const res = await fetch('product.json');
+        const json = await res.json();
+
+        console.log(json);
+        return json;
+    }
+
+    getProduct();
+    
+</script>
 </html>
