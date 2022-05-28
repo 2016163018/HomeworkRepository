@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Internet Programming Study</h1>
+    </header>
+    <nav class="button-wrapper">
+        <a href="./index.html"><button class="nav-button">메인페이지</button></a>
+        <a href="./login.html"><button class="nav-button nav-button__selected">로그인</button></a>
+        <a href="./signup.html"><button class="nav-button">회원가입</button></a>
+    </nav>
+    <main>
+        <form action="#">
+            <div class="input-wrapper">
+                <div>
+                    <label for="input-id">아이디</label>
+                    <input id="input-id" name="id" placeholder="아이디를 입력하세요" required/>
+                </div>
+                <div>
+                    <label for="input-password">비밀번호</label>
+                    <input id="input-password" name="password" type="password" placeholder="비밀번호를 입력하세요" required/>
+                </div>
+            </div>
+            <div class="button-wrapper">
+                <input class="button__submit" type="submit" value="로그인"/>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,168 @@
+body {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+  min-width: 480px;
+
+  width: 100vw;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+
+  flex-wrap: nowrap;
+  padding-top: 20px;
+}
+
+@media screen {
+  .item {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .item {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  header {
+    font-size: 13px;
+  }
+  nav {
+    flex-direction: column;
+  }
+  .item {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+nav input {
+  width: 100px;
+  height: 30px;
+}
+
+.header-title {
+  position: relative;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  white-space: nowrap;
+
+  animation-name: slide-header;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+}
+
+.nav-button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.nav-button:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.nav-button__selected {
+  background-color: lightgray;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px 0 20px 80px;
+}
+
+.input-wrapper > div {
+  display: flex;
+  margin: 10px 0;
+}
+
+.input-wrapper label {
+  display: block;
+
+  width: 100px;
+  text-align: center;
+}
+
+.button__submit {
+  background-color: lightgreen;
+}
+
+.button__cancel {
+  background-color: lightcoral;
+}
+
+header {
+  position: relative;
+}
+
+@keyframes slide-header {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.item-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
+  border: 1px solid black;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.item-image {
+  width: 100px;
+  transition: all 2s ease-in-out;
+}
+
+.item-rotate:hover {
+  transform: rotate(360deg);
+}
+.item-resize:hover {
+  width: 100%;
+}
+
+hr {
+  display: block;
+
+  width: 100%;
+  height: 0.5px;
+  margin: 15px 0;
+  background-color: black;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
