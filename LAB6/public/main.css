@@ -146,13 +146,6 @@ input[type="button"], input[type="submit"]{
 .item > div {
   font-size: 18px;
   font-weight: bold;
-  opacity: 0;
-}
-.item__selected {
-  background-color:azure;
-}
-.item__selected > div{
-  opacity: 1;
 }
 
 hr {

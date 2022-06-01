@@ -17,17 +17,30 @@
         <hr />
         <div class="search-wrapper">
             <label for="category-select">카테고리</label>
-            <select id="category-select"></select>
+            <select id="category-select">
+                <option value="all">All</option>
+                <option value="frog">Frog</option>
+                <option value="puppy">Puppy</option>
+                <option value="starfish">Starfish</option>
+            </select>
             <form class="search-form">
-                <input class="search-input" name="keyword"/>
+                <input class="search-input" name="keyword" value="<%= keyword %>" />
                 <input type="submit" value="검색">
             </form>
         </div>
         <hr />
-        <div class="item-wrapper"></div>
+        <div class="item-wrapper">
+            <% items.forEach(item=>{ %>
+            <div class="item">
+                <img class="item-image" src="<%= item.product_image %>" />
+                <div class="item-desc"><%= item.product_category %></div>
+                <div class="item-name"><%= item.product_title %></div>
+            </div>
+            <% }) %>
+        </div>
         <div class="observe-target"></div>
         <hr />
     </main>
 </body>
-<script type="text/javascript" src="index.js"></script>
+<script src="/index.js" type="text/javascript"></script>
 </html>
