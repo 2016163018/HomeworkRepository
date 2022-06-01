@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="/main.css" />
 </head>
 <body>
     <header>
@@ -31,14 +31,15 @@
         <hr />
         <div class="item-wrapper">
             <% items.forEach(item=>{ %>
-            <div class="item">
-                <img class="item-image" src="<%= item.product_image %>" />
-                <div class="item-desc"><%= item.product_category %></div>
-                <div class="item-name"><%= item.product_title %></div>
-            </div>
+                <div class="item">
+                    <a href="/product/<%= item.product_id %>">
+                        <img class="item-image" src="<%= item.product_image %>" />
+                        <div class="item-desc"><%= item.product_category %></div>
+                        <div class="item-name"><%= item.product_title %></div>
+                    </a>
+                </div>
             <% }) %>
         </div>
-        <div class="observe-target"></div>
         <hr />
     </main>
 </body>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Internet Programming Study</h1>
+    </header>
+    <nav>
+        <a href="/"><button class="nav-button">메인페이지</button></a>
+        <a href="/login"><button class="nav-button ">로그인</button></a>
+        <a href="/signup"><button class="nav-button">회원가입</button></a>            
+    </nav>
+    <hr />
+    <main>
+        <div class="main-title"">상품 상세</div>
+        <hr />
+        <div class="product-wrapper">
+            <img class="product-image" src="<%= product.product_image %>"/>
+            <div class="product-id">ID: <%= product.product_id %></div>
+            <div class="product-category">CATEGORY: <%= product.product_category %></div>
+            <div class="product-title">TITLE: <%= product.product_title %></div>
+            <div class="product-price">PRICE: <%= product.product_price %></div>
+        </div>
+        <hr />
+        <div class="main-title"">상품 후기</div>
+        <hr />
+        <div class="comment-wrapper">
+            <% comments.forEach(comment=>{ %>
+                <div class="comment"><%= comment.content %></div>
+            <% }) %>
+        </div>
+        <form class="comment-form" method="POST" action="/comment">
+            <input class="comment-input" name="comment"/>
+        </form>
+    </main>
+</body>
+</html>
